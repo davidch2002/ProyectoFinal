@@ -11,6 +11,7 @@
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_cartelera.xml" value="0.25" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_main2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_main_lista.xml" value="0.20416666666666666" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_presentacion.xml" value="0.20416666666666666" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_recuperar_contrasena.xml" value="0.25" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_registrar.xml" value="0.25" />
@@ -22,6 +23,7 @@
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/nav_header_cartelera.xml" value="0.33" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/menu/activity_cartelera_drawer.xml" value="0.33" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/menu/cartelera.xml" value="0.25" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1515" />
       </map>
     </option>
   </component>

@@ -11,4 +11,11 @@
     <string name="menu_home">Cartelera</string>
     <string name="menu_gallery">Usuario</string>
     <string name="menu_slideshow">Información</string>
+
+    <string-array name="Pelicula">
+        <item>Deadpool</item>
+        <item>Civil War</item>
+        <item>Batman y Superman</item>
+        <item>Suicide Squad</item>
+    </string-array>
 </resources>

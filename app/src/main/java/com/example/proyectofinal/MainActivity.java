@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity{
     EditText txtUsuario, txtContraseña;
 
     String usuario, contraseña;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,8 +127,8 @@ public class MainActivity extends AppCompatActivity{
 
     private void recuperarPreferencias(){
         SharedPreferences preferences = getSharedPreferences("preferenciasLogin", Context.MODE_PRIVATE);
-        txtUsuario.setText(preferences.getString("usuario", "usuario123"));
-        txtContraseña.setText(preferences.getString("contraseña", "12345"));
+        txtUsuario.setText(preferences.getString("usuario", ""));
+        txtContraseña.setText(preferences.getString("contraseña", ""));
     }
 
     /*

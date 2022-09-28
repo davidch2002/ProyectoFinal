@@ -1,27 +1,17 @@
-package com.example.proyectofinal.ui.home;
+package com.example.proyectofinal;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.os.Bundle;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.proyectofinal.Adapter;
-import com.example.proyectofinal.Peliculas;
-import com.example.proyectofinal.R;
-import com.example.proyectofinal.databinding.FragmentHomeBinding;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,39 +20,22 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeFragment extends Fragment {
-
-    private FragmentHomeBinding binding;
-
+public class MainActivity_Lista extends AppCompatActivity {
     private static String url = "https://davidch7.000webhostapp.com/Cineplanet/mostrar.php";
     List<Peliculas> peliculasList;
     RecyclerView recyclerView;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main_lista);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-
-        recyclerView=root.findViewById(R.id.recy);
+        recyclerView=findViewById(R.id.recy);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         peliculasList = new ArrayList<>();
 
         cargarImagen();
-
-        return root;
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
     }
 
     private void cargarImagen(){
@@ -85,7 +58,7 @@ public class HomeFragment extends Fragment {
                                         Peliculas.getString("urlImg")
                                 ));
                             }
-                            Adapter adapter = new Adapter(getActivity().getApplicationContext(), peliculasList);
+                            Adapter adapter = new Adapter(MainActivity_Lista.this, peliculasList);
                             recyclerView.setAdapter(adapter);
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -94,9 +67,9 @@ public class HomeFragment extends Fragment {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getActivity().getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity_Lista.this, error.toString(), Toast.LENGTH_SHORT).show();
             }
         });
-        Volley.newRequestQueue(getActivity().getApplicationContext()).add(stringRequest);
+        Volley.newRequestQueue(this).add(stringRequest);
     }
 }

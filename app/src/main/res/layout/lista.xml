@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="7dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/img_h"
+                android:scaleType="centerCrop"
+                android:background="#888888"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/img_h"
+                android:background="@drawable/mask" />
+
+            <TextView
+                android:id="@+id/titulo"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre de la pelicula"
+                android:textColor="#ffffff"
+                android:layout_alignBottom="@+id/img"
+                android:padding="@dimen/small"/>
+
+            <ImageView
+                android:id="@+id/ic_fecha"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_fecha"
+                android:layout_below="@+id/img"
+                android:layout_margin="@dimen/small"
+                android:layout_marginRight="@dimen/small"
+                />
+
+            <TextView
+                android:id="@+id/txt_fecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/ic_fecha"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@id/ic_fecha"
+                android:text="2 meses" />
+
+            <ImageView
+                android:id="@+id/ic_duracion"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_duracion"
+                android:layout_below="@id/ic_fecha"
+                android:layout_margin="@dimen/small"
+                android:layout_marginRight="@dimen/small"
+                />
+            <TextView
+                android:id="@+id/txt_duracion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2:25:00"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@id/ic_duracion"
+                android:layout_alignBottom="@id/ic_duracion"
+                />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
