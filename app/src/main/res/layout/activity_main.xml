@@ -19,44 +19,27 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339" />
+        app:layout_constraintVertical_bias="0.319" />
 
     <EditText
         android:id="@+id/txtUsuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="18dp"
         android:layout_marginEnd="70dp"
-        android:layout_marginBottom="326dp"
+        android:layout_marginBottom="300dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/ic_person"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Usuario"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <EditText
-        android:id="@+id/txtContraseña"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="247dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="Contraseña"
+        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUsuario"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/btnlogin"
@@ -64,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginEnd="70dp"
-        android:layout_marginBottom="180dp"
+        android:layout_marginBottom="152dp"
         android:background="@drawable/button_rounded"
         android:fontFamily="sans-serif-medium"
         android:text="Ingresar"
@@ -82,34 +65,53 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="101dp"
         android:layout_marginEnd="101dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginBottom="120dp"
         android:clickable="true"
         android:text="¿Olvidaste tu contraseña?"
         android:textColor="#1E2E35"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/txtContraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="247dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/ic_pass"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUsuario"
+        app:layout_constraintVertical_bias="0.378"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/txtregistrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="101dp"
-        android:layout_marginTop="139dp"
         android:layout_marginEnd="101dp"
         android:layout_marginBottom="35dp"
         android:clickable="true"
-        android:onClick="btnLogin"
         android:text="¿No tienes una cuenta? Regístrate."
         android:textColor="#1E2E35"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnlogin"
         tools:ignore="TouchTargetSizeCheck" />
 
     <ImageView
@@ -117,12 +119,9 @@
         android:layout_width="379dp"
         android:layout_height="173dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="10dp"
         android:src="@drawable/cineplanet"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

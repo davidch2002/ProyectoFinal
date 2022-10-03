@@ -32,10 +32,10 @@
                 style="@style/TextAppearance.AppCompat.Large"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nombre de la pelicula"
-                android:textColor="#ffffff"
                 android:layout_alignBottom="@+id/img"
-                android:padding="@dimen/small"/>
+                android:padding="@dimen/small"
+                android:text="Nombre de la pelicula"
+                android:textColor="#ffffff" />
 
             <ImageView
                 android:id="@+id/ic_fecha"

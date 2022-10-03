@@ -1,7 +1,15 @@
 package com.example.proyectofinal;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private String user, pwd, names;
+
+    public User(String user, String pwd, String names) {
+        this.user = user;
+        this.pwd = pwd;
+        this.names = names;
+    }
 
     public String getUser() {
         return user;

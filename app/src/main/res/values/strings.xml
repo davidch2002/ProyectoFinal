@@ -10,7 +10,7 @@
 
     <string name="menu_home">Cartelera</string>
     <string name="menu_gallery">Usuario</string>
-    <string name="menu_slideshow">Información</string>
+    <string name="menu_slideshow">Mis compras</string>
 
     <string-array name="Pelicula">
         <item>Deadpool</item>

@@ -6,8 +6,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -23,20 +21,20 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity_Lista extends AppCompatActivity{
-    private static String url = "https://davidch7.000webhostapp.com/Cineplanet/mostrar.php";
-    List<Peliculas> peliculasList;
+public class Lista_combo extends AppCompatActivity {
+    private static String url = "https://davidch7.000webhostapp.com/Cineplanet/mostrarCombos.php";
+    List<Combos> combosList;
     RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_lista);
+        setContentView(R.layout.activity_lista_combo);
 
-        recyclerView=findViewById(R.id.recy);
+        recyclerView=findViewById(R.id.recy1);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        peliculasList = new ArrayList<>();
+        combosList = new ArrayList<>();
 
         cargarImagen();
     }
@@ -50,22 +48,19 @@ public class MainActivity_Lista extends AppCompatActivity{
                             JSONArray array = new JSONArray(response);
 
                             for (int i = 0; i < array.length(); i++) {
-                                JSONObject Peliculas = array.getJSONObject(i);
+                                JSONObject Combos = array.getJSONObject(i);
 
-                                peliculasList.add(new Peliculas(
-                                        Peliculas.getInt("idpelicula"),
-                                        Peliculas.getInt("precio_pelicula"),
-                                        Peliculas.getString("nombre_pelicula"),
-                                        Peliculas.getString("duracion_pelicula"),
-                                        Peliculas.getString("descripcion_pelicula"),
-                                        Peliculas.getString("fechaEstreno"),
-                                        Peliculas.getString("nombre_genero"),
-                                        Peliculas.getString("urlImg")
+                                combosList.add(new Combos(
+                                        Combos.getInt("idcombo"),
+                                        Combos.getString("nombre_combo"),
+                                        Combos.getDouble("precio_combo"),
+                                        Combos.getString("descripcion_combo"),
+                                        Combos.getString("urlImg")
                                 ));
                             }
-                            Adapter adapter = new Adapter(MainActivity_Lista.this, peliculasList, new Adapter.OnItemClickListener() {
+                            AdapterCombo adapter = new AdapterCombo(Lista_combo.this, combosList, new AdapterCombo.OnItemClickListener() {
                                 @Override
-                                public void onItemClick(Peliculas item) {
+                                public void onItemClick(Combos item) {
                                     moveToDescription(item);
                                 }
                             });
@@ -77,15 +72,29 @@ public class MainActivity_Lista extends AppCompatActivity{
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(MainActivity_Lista.this, error.toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Lista_combo.this, error.toString(), Toast.LENGTH_SHORT).show();
             }
         });
         Volley.newRequestQueue(this).add(stringRequest);
     }
 
-    public void moveToDescription(Peliculas item){
-        Intent intent = new Intent(MainActivity_Lista.this, DetallePelicula.class);
-        intent.putExtra("Peliculas", item);
+    public void moveToDescription(Combos item){
+        int idpelicula;
+        String pelicula;
+        int precio;
+        int idpersona;
+
+        idpelicula = getIntent().getIntExtra("idpelicula", 0);
+        pelicula = getIntent().getStringExtra("pelicula");
+        precio = getIntent().getIntExtra("precio", 0);
+        idpersona = getIntent().getIntExtra("idpersona", 0);
+
+        Intent intent = new Intent(Lista_combo.this, lista_locales.class);
+        intent.putExtra("Combos", item);
+        intent.putExtra("idpelicula", idpelicula);
+        intent.putExtra("pelicula", pelicula);
+        intent.putExtra("precio", precio);
+        intent.putExtra("idpersona", idpersona);
         startActivity(intent);
     }
 }

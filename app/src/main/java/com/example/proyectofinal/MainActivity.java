@@ -89,11 +89,12 @@ public class MainActivity extends AppCompatActivity{
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+
+                User item = null;
+
                 if(!response.isEmpty()){
                     guardarPreferencias();
-                    Intent intent = new Intent(getApplicationContext(), CarteleraActivity.class);
-                    startActivity(intent);
-                    finish();
+                    llevarInformacion(item);
                 }else{
                     Toast.makeText(MainActivity.this, "Usuario o contraseña incorrecta", Toast.LENGTH_SHORT).show();
                 }
@@ -131,82 +132,10 @@ public class MainActivity extends AppCompatActivity{
         txtContraseña.setText(preferences.getString("contraseña", ""));
     }
 
-    /*
-    public void btnLogin(View view) {
-
-        txtUsuario = (EditText) findViewById(R.id.txtUsuario);
-        txtContraseña = (EditText) findViewById(R.id.txtContraseña);
-
-        if (txtUsuario.getText().toString().isEmpty() | txtContraseña.getText().toString().isEmpty()) {
-            Snackbar.make(view, "Ingrese su usuario y/o contraseña", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
-        } else {
-            switch (txtUsuario.getText().toString()) {
-                case "david123":
-                    if (txtContraseña.getText().toString().equals("12345")) {
-                        Snackbar.make(view, "Bienvenido " + txtUsuario.getText(), Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-
-                        Intent intent = new Intent(MainActivity.this, CarteleraActivity.class);
-                        String nombre = "David Cuellar Huaringa";
-                        intent.putExtra("dato", nombre.toString());
-                        startActivity(intent);
-                        finish();
-                    } else {
-                        Snackbar.make(view, "Usuario y/o contraseña incorrecto(s)", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-                    }
-                    break;
-
-                case "antonyvargas321":
-                    if (txtContraseña.getText().toString().equals("54321")) {
-                        Snackbar.make(view, "Bienvenido " + txtUsuario.getText(), Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-
-                        Intent intent = new Intent(MainActivity.this, CarteleraActivity.class);
-                        String nombre = "Antony Vargas Silva";
-                        intent.putExtra("dato", nombre.toString());
-                        startActivity(intent);
-                        finish();
-                    } else {
-                        Snackbar.make(view, "Usuario y/o contraseña incorrecto(s)", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-                    }
-                    break;
-
-                case "gerardo123":
-                    if (txtContraseña.getText().toString().equals("123")) {
-                        Snackbar.make(view, "Bienvenido " + txtUsuario.getText(), Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-
-                        Intent intent = new Intent(MainActivity.this, CarteleraActivity.class);
-                        String nombre = "Gerardo Cuya Lujan";
-                        intent.putExtra("dato", nombre.toString());
-                        startActivity(intent);
-                        finish();
-                    } else {
-                        Snackbar.make(view, "Usuario y/o contraseña incorrecto(s)", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-                    }
-                    break;
-
-                case "angelorivero10":
-                    if (txtContraseña.getText().toString().equals("4321")) {
-                        Snackbar.make(view, "Bienvenido " + txtUsuario.getText(), Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-
-                        Intent intent = new Intent(MainActivity.this, CarteleraActivity.class);
-                        String nombre = "Angelo Rivero Roca";
-                        intent.putExtra("dato", nombre.toString());
-                        startActivity(intent);
-                        finish();
-                    } else {
-                        Snackbar.make(view, "Usuario y/o contraseña incorrecto(s)", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-                    }
-                    break;
-            }
-        }
-    */
-
+    public void llevarInformacion(User item){
+        Intent intent = new Intent(getApplicationContext(), CarteleraActivity.class);
+        intent.putExtra("usuario", usuario);
+        startActivity(intent);
+        finish();
+    }
 }

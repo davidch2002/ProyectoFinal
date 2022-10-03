@@ -17,6 +17,21 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".lista_miscompras"
+            android:exported="false" />
+        <activity
+            android:name=".DetalleVenta"
+            android:exported="false" />
+        <activity
+            android:name=".lista_locales"
+            android:exported="false" />
+        <activity
+            android:name=".Lista_combo"
+            android:exported="false" />
+        <activity
+            android:name=".DetallePelicula"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity_Lista"
             android:exported="false" />
         <activity

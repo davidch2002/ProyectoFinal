@@ -4,6 +4,7 @@ import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,6 +12,10 @@ import android.view.Menu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -22,13 +27,18 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.proyectofinal.databinding.ActivityCarteleraBinding;
+import com.squareup.picasso.Picasso;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class CarteleraActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityCarteleraBinding binding;
 
-    private TextView nombre;
+    private TextView usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,10 +76,11 @@ public class CarteleraActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.cartelera, menu);
 
-        nombre = (TextView)findViewById(R.id.txtregistrar);
+        //User element = (User) getIntent().getSerializableExtra("User");
 
-        String dato = getIntent().getStringExtra("dato");
-        nombre.setText("" + dato);
+        usuario = (TextView)findViewById(R.id.txtregistrar);
+
+        usuario.setText(getIntent().getExtras().getString("usuario"));
 
         return true;
     }

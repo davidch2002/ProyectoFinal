@@ -4,11 +4,22 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/drawable/button_rounded.xml" value="0.1945" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/drawable/edit.xml" value="0.1515" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/drawable/estado.xml" value="0.1" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/drawable/estadoactivo.xml" value="0.119" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/drawable/estadoinactivo.xml" value="0.119" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/drawable/ic_duracion.xml" value="0.1" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1945" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1515" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1945" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/drawable/side_nav_bar.xml" value="0.1945" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout-v31/nav_header_cartelera.xml" value="0.20416666666666666" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_cartelera.xml" value="0.25" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_detalle_pelicula.xml" value="0.25" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_detalle_venta.xml" value="0.25" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_lista_combo.xml" value="0.20416666666666666" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_lista_locales.xml" value="0.20416666666666666" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_lista_miscompras.xml" value="0.20416666666666666" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_main2.xml" value="0.20416666666666666" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_main_lista.xml" value="0.20416666666666666" />
@@ -17,13 +28,18 @@
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/activity_registrar.xml" value="0.25" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/app_bar_cartelera.xml" value="0.20416666666666666" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/content_cartelera.xml" value="0.20364583333333333" />
-        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/fragment_gallery.xml" value="0.20416666666666666" />
-        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/fragment_gallery.xml" value="0.25" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/fragment_slideshow.xml" value="0.20416666666666666" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/list_dulceria.xml" value="0.25" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/list_locales.xml" value="0.22" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/list_miscompras.xml" value="0.22" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/lista.xml" value="0.20416666666666666" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/layout/nav_header_cartelera.xml" value="0.33" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/menu/activity_cartelera_drawer.xml" value="0.33" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/menu/cartelera.xml" value="0.25" />
         <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1515" />
+        <entry key="..\:/Aplicaciones_Moviles/ProyectoFinal/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.119" />
       </map>
     </option>
   </component>

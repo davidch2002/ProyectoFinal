@@ -18,9 +18,16 @@ public class Adapter extends RecyclerView.Adapter<Adapter.PlayerViewnHolder> {
 
     private Context mCtx;
     private List<Peliculas> peliculasList;
-    public Adapter(Context mCtx, List<Peliculas>peliculasList){
+    final Adapter.OnItemClickListener listener;
+
+    public interface OnItemClickListener {
+        void onItemClick(Peliculas item);
+    }
+
+    public Adapter(Context mCtx, List<Peliculas>peliculasList, Adapter.OnItemClickListener listener){
          this.mCtx = mCtx;
          this.peliculasList = peliculasList;
+         this.listener = listener;
     }
 
     @NonNull
@@ -39,6 +46,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.PlayerViewnHolder> {
         Glide.with(mCtx)
                 .load(peliculas.getUrlImg())
                 .into(holder.img);
+        holder.bindData(peliculasList.get(position));
         holder.txttitulo.setText(peliculas.getNombre_pelicula());
         holder.txtduracion.setText(peliculas.getDuracion_pelicula());
         holder.txtFechaEstreno.setText(peliculas.getFechaEstreno());
@@ -50,9 +58,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.PlayerViewnHolder> {
         return peliculasList.size();
     }
 
-    static class PlayerViewnHolder extends RecyclerView.ViewHolder{
+    class PlayerViewnHolder extends RecyclerView.ViewHolder{
 
-        TextView txttitulo, txtduracion, txtFechaEstreno, txtDescripcion;
+        TextView txttitulo, txtduracion, txtFechaEstreno;
         ImageView img;
 
         public PlayerViewnHolder(@NonNull View itemView) {
@@ -62,6 +70,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.PlayerViewnHolder> {
             txtduracion = itemView.findViewById(R.id.txt_duracion);
             txtFechaEstreno = itemView.findViewById(R.id.txt_fecha);
             img = itemView.findViewById(R.id.img);
+        }
+
+        void bindData(final Peliculas item){
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    listener.onItemClick(item);
+                }
+            });
         }
     }
 }
