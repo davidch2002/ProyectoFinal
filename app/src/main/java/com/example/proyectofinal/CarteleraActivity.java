@@ -49,13 +49,14 @@ public class CarteleraActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.appBarCartelera.toolbar);
 
+        /*
         binding.appBarCartelera.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Este botón aún no ha sido configurado.", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
